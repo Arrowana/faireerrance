@@ -1,22 +1,141 @@
-section {
-    background-color: #999;
-    width: 100%;
-    height: 600px;
-    position:relative;
-    border-style: solid;
-
-    transform-origin: 0 0;
+header {
+  height: 100px;
 }
 
-img {
-    width: 10%;
+#logo-wrapper {
+  display: inline-block;
+  font-size: 0.6em;
+  width: 25%;
 }
 
-#fourth {
-    top: 60%;
-    left: 70%;
+#logo {
+  display: inline-block;
+  max-width: 75px;
+  margin-right: 5px;
+}
+
+#title {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#spaced {
+  letter-spacing: 2px;
+}
+
+#subtitle {
+  font-size: 0.8em;
+}
+
+nav {
+  display: inline-block;
+  height: 100%;
+  width: 74%;
+}
+
+nav a {
+  display: inline-block;
+  width: 22%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+#loading-container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 300px;
+  transform: translate(-150px, 0);
+  
+  text-align: center;
+}
+
+#loading-container img {
+  width: 170px;
+}
+
+#loading-bar {
+  height: 20px;
+  border: 1px solid;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: blue;
+  transition: 0.2s;
+}
+
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  animation: wobble 2s infinite;
+}
+
+#yellow {
+  top: 30%;
+  left: 20%;
+  background-color: yellow;
+}
+
+#pink {
+  top: 30%;
+  right: 20%;
+  background-color: red;
+}
+
+#blue-wrapper {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-100px, 0);
+}
+
+#blue {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blue;
+
+  animation: wobble 2s infinite;
+}
+
+@keyframes wobble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#traces {
+  background-color: #999;
+  width: 100%;
+  height: 600px;
+  position:relative;
+  border-style: solid;
+
+  transform-origin: 0 0;
+}
+
+#traces img {
+  height: 10%;
 }
 
 .spacer {
-    display: inline-block;
+  display: inline-block;
 }
