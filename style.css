@@ -1,11 +1,15 @@
+body {
+  margin: 0;
+}
+
 header {
   height: 100px;
 }
 
 #logo-wrapper {
   display: inline-block;
-  font-size: 0.6em;
-  width: 25%;
+  font-size: 0.55em;
+  width: 30%;
 }
 
 #logo {
@@ -14,13 +18,17 @@ header {
   margin-right: 5px;
 }
 
+@media screen and (max-width: 1200px) {
+
+}
+
 #title {
   display: inline-block;
   vertical-align: top;
 }
 
 #spaced {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 #subtitle {
@@ -30,7 +38,7 @@ header {
 nav {
   display: inline-block;
   height: 100%;
-  width: 74%;
+  width: 69%;
 }
 
 nav a {
@@ -59,6 +67,7 @@ nav a:hover {
 
 #loading-container img {
   width: 170px;
+  z-index: 1;
 }
 
 #loading-bar {
@@ -75,22 +84,22 @@ nav a:hover {
 
 .bubble {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 15%;
+  padding-bottom: 15%;
   border-radius: 50%;
 
   animation: wobble 2s infinite;
 }
 
 #yellow {
-  top: 30%;
-  left: 20%;
+  top: 25%;
+  left: 15%;
   background-color: yellow;
 }
 
 #pink {
-  top: 30%;
-  right: 20%;
+  top: 25%;
+  right: 15%;
   background-color: red;
 }
 
@@ -98,14 +107,21 @@ nav a:hover {
   position: absolute;
   bottom: 2%;
   left: 50%;
-  transform: translate(-100px, 0);
+
+  width: 15%;
+  height: 0;
+  padding-bottom: 15%;
+  display: flex;
+
+  transform: translate(-50%, 0);
 }
 
 #blue {
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
   background-color: blue;
+  width: 100%;
+  padding-bottom: 100%;
+  display: inline-block;
 
   animation: wobble 2s infinite;
 }
@@ -138,4 +154,39 @@ nav a:hover {
 
 .spacer {
   display: inline-block;
+}
+
+/*
+ *Videos page
+ * */
+
+#videos {
+  position: relative;
+  width: 100%;
+}
+
+#videos-wrapper {
+  display: flex;
+}
+
+iframe {
+  width: 33.33vw;
+  height: 18.74vw;
+}
+
+.video-overlay {
+  top: 0;
+  position: absolute;
+  width: 33.33vw;
+  height: 18.74vw;
+  opacity: 0;
+  font-size: default;
+  background: blue;
+  cursor:pointer;
+}
+
+.video-overlay:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+  z-index: 10;
 }
