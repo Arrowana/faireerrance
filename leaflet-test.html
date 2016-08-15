@@ -13,18 +13,47 @@
     
     <script>
     function init() {
-        var map = L.map('map', {
-            maxZoom: 24,
-            minZoom: -24,
-            crs: L.CRS.Simple
-        }).setView([image.height/2, image.width/2], -3);
+      var map = L.map('map', {
+        maxZoom: 24,
+        minZoom: -24,
+        crs: L.CRS.Simple
+      }).setView([image.height/2, image.width/2], -3);
 
-        //map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
+      //map.setMaxBounds(new L.LatLngBounds([0,500], [500,0]));
 
-        var imageUrl = 'images/fleuve.png'
-        var imageBounds = [[image.width,0], [0,image.height]];
+      var imageUrl = 'images/fleuve.png'
+      var imageBounds = [[image.width,0], [0,image.height]];
 
-        L.imageOverlay(imageUrl, imageBounds).addTo(map);
+      L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+      map.fitBounds(imageBounds);
+
+      var geojsonFeature = {
+        "type": "Feature",
+        "properties": {
+            "name": "Coors Field",
+            "amenity": "Baseball Stadium",
+            "popupContent": "This is where the Rockies play!"
+      },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [0, 0]
+        }
+      };
+
+      L.geoJson(geojsonFeature, {
+        onEachFeature: test
+      }).addTo(map);
+
+      let rect = L.rectangle(L.latLngBounds([0, 0], [1000, 1000]), {stroke: false, fillOpacity: 0});
+      rect.addTo(map);
+      rect.addEventListener('click', x=> {console.log('rect clicked')});
+    }
+
+    function test(feature, layer) {
+      layer.on('click', function(e) {
+        console.log('clicked');
+      });
     }
 
     let image = document.getElementById('mapimage');
