@@ -31,18 +31,26 @@
     
     <script>
     let map;
+    let imageO;
     function initLeaflet() {
       console.log('start leaflet initialization');
       map = L.map('mapcontainer', {
         maxZoom: 0,
         minZoom: -4,
         crs: L.CRS.Simple
-      }).setView([img.height/2, img.width/2], -4);
+      });
+  
+      map.setView([img.height/2, img.width/2], -4);
 
       var imageUrl = 'images/traces.jpg';
       var imageBounds = [[0,0], [img.height,img.width]];
 
-      L.imageOverlay(imageUrl, imageBounds).addTo(map);
+      imageO = L.imageOverlay(imageUrl, imageBounds);
+      imageO.on('load', x => {
+        console.log('done loading');
+      });
+
+      imageO.addTo(map);
 
       map.fitBounds(imageBounds);
 

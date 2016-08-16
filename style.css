@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -169,12 +170,17 @@ nav a:hover {
 }
 
 #videos-wrapper {
-  display: flex;
+  font-size: 0;
+}
+
+#videos-wrapper > div {
+  font-size: 1rem;
 }
 
 iframe {
-  width: 33.33vw;
-  height: 18.74vw;
+  display: inline-block;
+  width: 33.33%;
+  height: calc(33vw * 9 / 16);
 }
 
 .video-overlay {
