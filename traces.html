@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <title>Charles</title>
+    <title>Faire errance</title>
 
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
+    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+    <script src="js/leaflet/leaflet.js"></script> <!-- or use leaflet-src.js --!>
   <body>
-    <h1>Hello</h1>
-    <section id="traces">
-      <img src="images/DSC0001.jpg">
-      <img src="images/DSC0002.jpg">
-      <img src="images/DSC0003.jpg">
-      <img src="images/DSC0004.jpg">
-      <img src="images/DSC0005.png"><br/>
-
-      <img src="images/DSC0006.png">
-      <img src="images/DSC0007.jpg">
-      <div class="spacer" style="width: 5%;">
+    <header>
+      <div id="logo-wrapper">
+        <img id="logo" src="images/faireerrance-logo.png">
+        <div id="title">
+          <h1><span id="spaced">FAIRE ERRANCE</span><br />
+          <span id="subtitle">(C'est un peu ressentir)</span></h1>
+        </div>
       </div>
-      <img src="images/DSC0008.jpg">
-      <img src="images/DSC0009.jpg">
-      <img src="images/DSC0010.png">
-    </section>
 
-    <script src="main.js"></script>
+      <nav>
+        <a href="videos.html">VIDEOS</a> 
+        <a href="traces.html">TRACES</a> 
+        <a href="#">LE PROJET</a> 
+        <a href="#">PARTICIPER</a>
+      </nav>
+    </header>
+
+    <div id="mapcontainer" style="height: calc(100vh - 80px); width: 100%;"></div>
+    <img src="images/traces.jpg" id="mapimage" style="display: none;">
+    
+    <script>
+    let map;
+    function initLeaflet() {
+      console.log('start leaflet initialization');
+      map = L.map('mapcontainer', {
+        maxZoom: 0,
+        minZoom: -4,
+        crs: L.CRS.Simple
+      }).setView([img.height/2, img.width/2], -4);
+
+      var imageUrl = 'images/traces.jpg';
+      var imageBounds = [[0,0], [img.height,img.width]];
+
+      L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+      map.fitBounds(imageBounds);
+
+      var geojsonFeature = {
+        "type": "Feature",
+        "properties": {
+            "name": "Coors Field",
+            "amenity": "Baseball Stadium",
+            "popupContent": "This is where the Rockies play!"
+      },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [0, 0]
+        }
+      };
+
+      L.geoJson(geojsonFeature, {
+        onEachFeature: test
+      }).addTo(map);
+
+      let rect = L.rectangle(L.latLngBounds([0, 0], [1000, 1000]), {stroke: false, fillOpacity: 0});
+      rect.addTo(map);
+      rect.addEventListener('click', x=> {console.log('rect clicked')});
+    }
+
+    function test(feature, layer) {
+      layer.on('click', function(e) {
+        console.log('clicked');
+      });
+    }
+
+    let img = document.getElementById("mapimage");
+    img.onload = initLeaflet();
+
+    </script>
   </body>
 </html>

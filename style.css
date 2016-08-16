@@ -3,13 +3,13 @@ body {
 }
 
 header {
-  height: 100px;
+  height: 80px;
 }
 
 #logo-wrapper {
   display: inline-block;
   font-size: 0.55em;
-  width: 30%;
+  width: 25%;
 }
 
 #logo {
@@ -19,7 +19,9 @@ header {
 }
 
 @media screen and (max-width: 1200px) {
-
+  header h1 {
+    font-size: 0.8em;
+  }
 }
 
 #title {
@@ -37,15 +39,16 @@ header {
 
 nav {
   display: inline-block;
-  height: 100%;
-  width: 69%;
+  height: 80;
+  vertical-align: top;
+  width: 74%;
 }
 
 nav a {
   display: inline-block;
   width: 22%;
   height: 100%;
-  vertical-align: middle;
+  line-height: 80px;
   text-align: center;
   text-decoration: none;
   color: black;
