@@ -7,9 +7,9 @@ videoOverlays.forEach(function(item) {
     console.log('clicked');
     console.log(item);
 
-    //Trigger autoplay
-    let target = item.getAttribute('data-target');
-    document.getElementById(target).src += '&autoplay=1';
+    let video = item.parentNode.querySelector('iframe');
+
+    video.src += '&autoplay=1';
 
     //Hide overlay element
     item.style.display = 'none';
