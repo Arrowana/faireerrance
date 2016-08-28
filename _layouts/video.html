@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<section id="video-container">
+  <div id="video-info">
+    <h2>{{ page.group }}</h2>
+    {{ content }}
+
+    {% for link in page.links %}
+      <a href="{{ link.url }}">{{ link.name }}</a>
+    {% endfor %}
+  </div>
+
+  <iframe id="video-frame" src="https://player.vimeo.com/video/{{ page.video_id }}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</section>

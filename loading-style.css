@@ -1,0 +1,83 @@
+#loading-container {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 300px;
+  transform: translate(-150px, 0);
+  
+  text-align: center;
+}
+
+#loading-container img {
+  width: 170px;
+  z-index: 1;
+}
+
+#loading-bar {
+  height: 20px;
+  border: 1px solid;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: blue;
+  transition: 0.2s;
+}
+
+.bubble {
+  position: absolute;
+  width: 15%;
+  padding-bottom: 15%;
+  border-radius: 50%;
+
+  animation: wobble 2s infinite;
+}
+
+#yellow {
+  top: 25%;
+  left: 15%;
+  background-color: yellow;
+}
+
+#pink {
+  top: 25%;
+  right: 15%;
+  background-color: red;
+}
+
+#blue-wrapper {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+
+  width: 15%;
+  height: 0;
+  padding-bottom: 15%;
+  display: flex;
+
+  transform: translate(-50%, 0);
+}
+
+#blue {
+  border-radius: 50%;
+  background-color: blue;
+  width: 100%;
+  padding-bottom: 100%;
+  display: inline-block;
+
+  animation: wobble 2s infinite;
+}
+
+@keyframes wobble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
