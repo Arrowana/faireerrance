@@ -1,50 +1,48 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Faire errance</title>
+---
+layout: default
+links:
+  - name: 21.01.16 Montreal
+  - name: 23.03.16 St-Donat
+  - name: 20.06.16 Rimouski
+  - name: 21.01.16 Montreal
+  - name: 21.01.16 Montreal
+  - name: 23.03.16 St-Donat
+  - name: 20.06.16 Rimouski
+  - name: 21.01.16 Montreal
+  - name: 21.01.16 Montreal
+  - name: 23.03.16 St-Donat
+  - name: 20.06.16 Rimouski
+  - name: 21.01.16 Montreal
+---
+<section id="landing">
+  <article id="summary">
+    <p>
+Nous souhaitons dÃ©velopper un nouveau mode de connaissance du
+rÃ©el; un travail de mÃ©moire par la crÃ©ation dâune forme nouvelle cherchant
+Ã  traduire lâexpÃ©rience du paysage. Revendiquer une appropriation
+poÃ©tique du territoire par le corps, une exploration physique
+de lâespace, prise de conscience du territoire sur lequel nous vivons,
+des espaces que nous franchissons et des zones inconnues parce que
+hors de nos trajets quotidiens. Le projet part dâun constat dâÃ©chec :
+lâimpossibilitÃ© de recrÃ©er une situation vÃ©cue de lâespace. Notre projet
+sâinscrit comme tentative pour traduire lâexpÃ©rience dâune errance.</p>
+<p>
+Territoire virtuel extensible formÃ© par lâaccumulation
+dâartÃ©facts collectÃ©s lors dâexpÃ©ditions.
+Les artÃ©facts â objets trouvÃ©s, photographies, sons, etc. â ainsi collectÃ©s
+deviennent matÃ©riau Ã  activer dans des performances qui sont
+intÃ©grÃ©es Ã  la plateforme sous forme de vidÃ©os. La plateforme web
+est organisÃ©e en diffÃ©rentes sÃ©ries dâexploration (feuve, froidure,
+etc.); chaque sÃ©rie se penchant sur un aspect particulier du territoire.
+Il sâagit dâune plateforme ouverte Ã  investir : chacun.e est invitÃ©.e
+Ã  faire ses propres expÃ©ditions, Ã  enrichir la collection dâartÃ©facts
+virtuels, Ã  les performer, Ã  les agencer, Ã  crÃ©er ses propres sÃ©ries.
+ </p>
+  </article>
 
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <div id="logo-wrapper">
-        <img id="logo" src="images/faireerrance-logo.png">
-        <div id="title">
-          <h1><span id="spaced">FAIRE ERRANCE</span><br />
-          <span id="subtitle">(C'est un peu ressentir)</span></h1>
-        </div>
-      </div>
-
-      <nav>
-        <a href="videos.html">VIDEOS</a> 
-        <a href="traces.html">TRACES</a> 
-        <a href="#">LE PROJET</a> 
-        <a href="#">PARTICIPER</a>
-      </nav>
-    </header>
-
-    <section>
-      <div id="loading-container">
-        <img src="images/faireerrance-logo.png">
-        <div id="loading-bar"> 
-          <div id="progress">
-          </div>
-        </div>
-        <p>CHARGEMENT DES TRACES</p>
-      </div>
-
-      <div id="yellow" class="bubble">
-      </div>
-
-      <div id="pink" class="bubble">
-      </div>
-
-      <div id="blue-wrapper">
-        <div id="blue">
-        </div>
-      </div>
-    </section>
-
-    <script src="ui.js"></script>
-  </body>
-</html>
+  <aside>
+    {% for link in page.links %}
+      <a href="">{{ link.name }}</a>
+    {% endfor %}
+  </aside>
+</section>

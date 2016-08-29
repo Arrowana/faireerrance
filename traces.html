@@ -1,90 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Faire errance</title>
+---
+layout: default
+---
+<link rel="stylesheet" href="js/leaflet/leaflet.css" />
+<script src="js/leaflet/leaflet.js"></script>
+<div id="mapcontainer" style="height: calc(100vh - 80px); width: 100%;">
+</div>
 
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
-    <script src="js/leaflet/leaflet.js"></script> <!-- or use leaflet-src.js --!>
-  <body>
-    <header>
-      <div id="logo-wrapper">
-        <img id="logo" src="images/faireerrance-logo.png">
-        <div id="title">
-          <h1><span id="spaced">FAIRE ERRANCE</span><br />
-          <span id="subtitle">(C'est un peu ressentir)</span></h1>
-        </div>
-      </div>
+<img src="images/traces.jpg" id="mapimage" style="display: none;">
 
-      <nav>
-        <a href="videos.html">VIDEOS</a> 
-        <a href="traces.html">TRACES</a> 
-        <a href="#">LE PROJET</a> 
-        <a href="#">PARTICIPER</a>
-      </nav>
-    </header>
-
-    <div id="mapcontainer" style="height: calc(100vh - 80px); width: 100%;"></div>
-    <img src="images/traces.jpg" id="mapimage" style="display: none;">
-    
-    <script>
-    let map;
-    let imageO;
-    function initLeaflet() {
-      console.log('start leaflet initialization');
-      map = L.map('mapcontainer', {
-        maxZoom: 0,
-        minZoom: -4,
-        crs: L.CRS.Simple
-      });
-  
-      map.setView([img.height/2, img.width/2], -4);
-
-      var imageUrl = 'images/traces.jpg';
-      var imageBounds = [[0,0], [img.height,img.width]];
-
-      imageO = L.imageOverlay(imageUrl, imageBounds);
-      imageO.on('load', x => {
-        console.log('done loading');
-      });
-
-      imageO.addTo(map);
-
-      map.fitBounds(imageBounds);
-
-      var geojsonFeature = {
-        "type": "Feature",
-        "properties": {
-            "name": "Coors Field",
-            "amenity": "Baseball Stadium",
-            "popupContent": "This is where the Rockies play!"
-      },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [0, 0]
-        }
-      };
-
-      L.geoJson(geojsonFeature, {
-        onEachFeature: test
-      }).addTo(map);
-
-      let rect = L.rectangle(L.latLngBounds([0, 0], [1000, 1000]), {stroke: false, fillOpacity: 0});
-      rect.addTo(map);
-      rect.addEventListener('click', x=> {console.log('rect clicked')});
-    }
-
-    function test(feature, layer) {
-      layer.on('click', function(e) {
-        console.log('clicked');
-      });
-    }
-
-    let img = document.getElementById("mapimage");
-    img.onload = initLeaflet();
-
-    </script>
-  </body>
-</html>
+<script src="js/traces.js"></script>

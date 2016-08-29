@@ -1,79 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Faire errance</title>
-
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <div id="logo-wrapper">
-        <img id="logo" src="images/faireerrance-logo.png">
-        <div id="title">
-          <h1><span id="spaced">FAIRE ERRANCE</span><br />
-          <span id="subtitle">(C'est un peu ressentir)</span></h1>
-        </div>
+---
+layout: default
+title: Videos
+#Declare video description and link
+---
+<section id="videos">
+  <div id="videos-wrapper">
+  {% for video in site.data.videos %}
+    <div class="container">
+      <div class="video-overlay">
+        <p>{{ video.desc }}</p>
       </div>
+      <iframe src="https://www.youtube.com/embed/{{ video.link }}?rel=0&amp;showinfo=0&amp;controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  {% endfor %}
+</section>
 
-      <nav>
-        <a href="#">VIDEOS</a> 
-        <a href="traces.html">TRACES</a> 
-        <a href="#">LE PROJET</a> 
-        <a href="#">PARTICIPER</a>
-      </nav>
-    </header>
+<script src="videos.js"></script>
+<script>
+  let baseUrl = 'https://www.youtube.com/embed/';
 
-    <section id="videos">
-      <div id="videos-wrapper">
-        <div class="container">
-          <div class="video-overlay">
-            <p>Techno toujours pareil, boom boom dans les or...</p>
-          </div>
-          <iframe src="https://www.youtube.com/embed/x537Cqg5nEI?rel=0&amp;showinfo=0&amp;controls=0&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-          <div class="video-overlay">
-            <p>Des formes et des couleurs</p>
-          </div>
-        <iframe src="https://www.youtube.com/embed/4c0iJZgdtFM?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-          <div class="video-overlay">
-            <p>Crocosmonaute, wtf?</p>
-          </div>
-        <iframe src="https://www.youtube.com/embed/WrmuAiyeMP0?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-          <div class="video-overlay">
-          </div>
-        <iframe src="https://www.youtube.com/embed/cRwSynQWiPI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="container">
-          <div class="video-overlay">
-            <p>Techno toujours pareil, boom boom dans les or...</p>
-          </div>
-        <iframe src="https://www.youtube.com/embed/cRwSynQWiPI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <iframe style="display: none;" id="fourth" src="https://www.youtube.com/embed/cRwSynQWiPI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        <iframe id="fourth" src="https://www.youtube.com/embed/cRwSynQWiPI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-        <iframe id="fourth" src="https://www.youtube.com/embed/cRwSynQWiPI?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-
-<iframe src="https://player.vimeo.com/video/178297914" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-
-    </section>
-
-    <script src="videos.js"></script>
-    <script>
-      let baseUrl = 'https://www.youtube.com/embed/';
-
-      let videos = ['x537Cqg5nEI', '4c0iJZgdtFM', 'WrmuAiyeMP0', 'cRwSynQWiPI']; 
-    </script>
-  </body>
-</html>
+  let videos = ['x537Cqg5nEI', '4c0iJZgdtFM', 'WrmuAiyeMP0', 'cRwSynQWiPI']; 
+</script>
+{{ page.videos }}
