@@ -4,6 +4,17 @@ body {
   padding: 0;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 #traces {
   background-color: #999;
   width: 100%;
@@ -48,19 +59,12 @@ aside {
   height: 100%;
   border-right: 6px double grey;
   border-left: 6px double grey;
+  padding-top: 10px;
 }
 
 aside a {
   margin-left: 20px;
-  display: block;
-  text-decoration: none;
   font-size: 1.2em;
-  color: black;
-}
-
-aside a:hover {
-  font-weight: bold;
-  cursor: pointer;
 }
 
 #video-container {
@@ -76,21 +80,25 @@ aside a:hover {
   vertical-align: top;
 }
 
-#video-info a {
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-
-#video-info a:hover {
-  font-weight: bold;
-  cursor: pointer;
-}
-
 #video-frame {
   display: inline-block;
   position: absolute;
   right: 0;
   width: 50vw;
   height: calc(50vw * 9/16);
+}
+
+#errances {
+  width: 80%;
+  margin: auto;
+}
+
+#errances article {
+  display: inline-block;
+  width: 50%;
+}
+
+#errances img {
+  display: inline-block;
+  width: 49%;
 }

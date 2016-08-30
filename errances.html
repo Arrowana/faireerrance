@@ -1,38 +1,36 @@
 ---
 layout: default
 links:
-  - group: 
-    - categorie: FLEUVE
-      elements:
-      - name: 21.01.16 MontrÃ©al, Canada, L. Bourgault et C. Dual
-        url: '' 
-      - name: 21.01.16 MontrÃ©al, Canada, L. Bourgault et C. Duval
-        url: ''
-      - name: 20.06.16 Rimouski, L. Bourgault
-        url: ''
-  - group:
-    - categorie: FROIDURE
-      elements:
-      - name: 23.03.16 Val-Morin, Canada, L. Bourgault, C. Duval, M.-M. Beaudoin 
-        url: ''
-  - group:
-    - categorie: RESISTANCE
-      elements:
-      - name: 20.06.16 Rimouski
-        url: ''
+  - categorie: FLEUVE
+    elements:
+    - name: 21.01.16 Montréal, Canada, L. Bourgault et C. Dval
+      url: '' 
+    - name: 21.01.16 Montréal, Canada, L. Bourgault et C. Duval
+      url: ''
+    - name: 20.06.16 Rimouski, L. Bourgault
+      url: ''
+  - categorie: FROIDURE
+    elements:
+    - name: 23.03.16 Val-Morin, Canada, L. Bourgault, C. Duval, M.-M. Beaudoin 
+      url: ''
+  - categorie: RESISTANCE
+    lements:
+    - name: 20.06.16 Rimouski
+      url: ''
+  - categorie: APPARITION
+    elements:
+    - name: 20.06.16 Rimouski
+      url: ''
 ---
-<section>
-  {{ page.links }}
+<section id="errances">
+  <article>
   {% for group in page.links %}
-    <h2>{{ group.categorie }}<h2>
-    {% for element in group.elements %}
-    <a href="">{{ element.name }}</a>
-    {% endfor %}
+    <h2>{{ group.categorie }}</h2>
+      {% for element in group.elements %}
+        <a href="element.url">{{ element.name }}</a><br />
+      {% endfor %}
   {% endfor %}
-
-  <h2>RESISTANCE<h2>
-
-  <h2>APPARITION<h2>
-  20.06.16 Rimouski
-
+  </article>
+  
+  <img src="images/carte.png">
 </section>
