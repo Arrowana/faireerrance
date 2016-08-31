@@ -10,7 +10,7 @@ function initLeaflet() {
 
   map.setView([img.height/2, img.width/2], -4);
 
-  var imageUrl = 'images/traces.jpg';
+  var imageUrl = mapImage;
   var imageBounds = [[0,0], [img.height,img.width]];
 
   imageO = L.imageOverlay(imageUrl, imageBounds);

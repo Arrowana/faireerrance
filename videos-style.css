@@ -18,8 +18,15 @@
   height: calc(33vw * 9 / 16);
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100vw;
+    height: calc(100vw * 9 / 16);
+  }
+}
+
 .container iframe {
-  width: 100%;
+  width: 100.5%;
   height: 100%;
 }
 
@@ -31,7 +38,7 @@
   height: 100%;
   opacity: 0;
   background-color: blue;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .video-overlay:hover {
