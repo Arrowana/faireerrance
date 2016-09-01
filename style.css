@@ -102,3 +102,20 @@ aside a {
   display: inline-block;
   width: 49%;
 }
+
+#errance {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+  
+
+#errance article {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#errance iframe {
+  display: inline-block;
+}
