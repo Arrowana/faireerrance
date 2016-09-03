@@ -2,6 +2,7 @@
 layout: default
 links:
   - categorie: FLEUVE
+    color: blue
     elements:
     - name: 21.01.16 Montréal, Canada, L. Bourgault et C. Dval
       url: '' 
@@ -10,14 +11,17 @@ links:
     - name: 20.06.16 Rimouski, L. Bourgault
       url: ''
   - categorie: FROIDURE
+    color: blue
     elements:
     - name: 23.03.16 Val-Morin, Canada, L. Bourgault, C. Duval, M.-M. Beaudoin 
       url: ''
   - categorie: RESISTANCE
+    color: red
     elements:
     - name: 20.06.16 Rimouski
       url: ''
   - categorie: APPARITION
+    color: yellow
     elements:
     - name: 20.06.16 Rimouski
       url: ''
@@ -25,7 +29,7 @@ links:
 <section id="errances">
   <article>
   {% for group in page.links %}
-    <h2>{{ group.categorie }}</h2>
+    <p><span style="color: {{ group.color }};">&#9679;</span>{{ group.categorie }}</p>
       {% for element in group.elements %}
         <a href="element.url">{{ element.name }}</a><br />
       {% endfor %}

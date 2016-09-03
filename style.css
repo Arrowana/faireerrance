@@ -37,16 +37,14 @@ a:hover {
   width: 80%;
   padding: 10px;
   margin: auto;
-  height: calc(80vh - 80px);
 }
 
 #summary {
   display: inline-block;
-  width: 70%;
+  width: 65%;
   height: 100%;
   vertical-align: top;
-  padding: 10px;
-  border-left: 6px double grey;
+  border-top: 3px solid black;
 }
 
 #summary p {
@@ -57,14 +55,14 @@ aside {
   display: inline-block;
   width: 23%;
   height: 100%;
-  border-right: 6px double grey;
-  border-left: 6px double grey;
-  padding-top: 10px;
+  border-top: 3px solid black;
+  margin-left: 50px;
+  padding-top: 1em;
+  text-align: center;
 }
 
 aside a {
   margin-left: 20px;
-  font-size: 1.2em;
 }
 
 #video-container {
@@ -96,11 +94,18 @@ aside a {
 #errances article {
   display: inline-block;
   width: 50%;
+  border-top: 3px solid black;
 }
 
 #errances img {
   display: inline-block;
   width: 49%;
+  vertical-align: middle;
+  margin-top: -50%;
+}
+
+#errances span {
+  margin-left: -1ch;
 }
 
 #errance {
@@ -118,4 +123,13 @@ aside a {
 
 #errance iframe {
   display: inline-block;
+}
+
+#logos {
+  width: 80%;
+  margin: auto;
+}
+
+#logos img {
+  width: 100%;
 }
