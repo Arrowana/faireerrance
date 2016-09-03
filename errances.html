@@ -29,7 +29,7 @@ links:
 <section id="errances">
   <article>
   {% for group in page.links %}
-    <p><span style="color: {{ group.color }};">&#9679;</span>{{ group.categorie }}</p>
+    <p><span style="color: {{ group.color }};">&#9679; </span>{{ group.categorie }}</p>
       {% for element in group.elements %}
         <a href="element.url">{{ element.name }}</a><br />
       {% endfor %}
