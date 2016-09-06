@@ -1,3 +1,4 @@
+//Get all video overlays
 let videoOverlays = document.querySelectorAll('.video-overlay');
 
 videoOverlays = Array.from(videoOverlays);
@@ -9,8 +10,14 @@ videoOverlays.forEach(function(item) {
 
     let video = item.parentNode.querySelector('iframe');
 
-    video.src += '&autoplay=1';
+    var player = new Vimeo.Player(video);
+    player.play();
 
+    videoOverlays.forEach(function(i) {
+      //Make all video overlay block display
+      i.style.display = 'block';
+    });
+    
     //Hide overlay element
     item.style.display = 'none';
   };
@@ -20,31 +27,9 @@ videoOverlays.forEach(function(item) {
 
 var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-let player1;
-let player2;
-let player3;
-function onYouTubeIframeAPIReady() {
-  player1 = new YT.Player('first', {
-    events: {
-      'onReady': testStart,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-  console.log('wadwad');
-
-};
-
 function testStart() {
-  //player1.playVideo();
-  player1.addEventListener('onStateChange', function(e) {
-    console.log('State is:', e.data);
-  });
-}
+  var iframe = document.querySelector('iframe');
+  var player= new Vimeo.Player(iframe);
 
-function onPlayerStateChange(event) {
-  console.log(event.data);
+  player.play();
 }
