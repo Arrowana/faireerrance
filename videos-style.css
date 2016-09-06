@@ -34,11 +34,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100.5%;
   height: 100%;
   opacity: 0;
   background-color: blue;
   cursor: pointer;
+  text-align: center;
+  color: white;
 }
 
 .video-overlay:hover {

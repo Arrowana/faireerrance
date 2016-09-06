@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section id="errance">
+  <article>
+    <p>{{ page.date }} {{ page.location }}</p>
+
+    {% for author in page.authors %}
+    <p>{{ author }}<p>
+    {% endfor %}
+
+    <img src="images/logos/logo_{{ page.categorie }}.png"></img>
+
+    <div id="errance-links">
+      {% for link in page.links %}
+        <a>{{ link.name }}</a>
+      {% endfor %}
+    </div>
+  </article>
+
+  <iframe id="errance-video" src="https://player.vimeo.com/video/179430733?byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</section>

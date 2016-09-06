@@ -1,19 +1,23 @@
 ---
 layout: default
 title: Videos
-#Declare video description and link
+#requires _data/videos.yml
 ---
 <section id="videos">
   <div id="videos-wrapper">
   {% for video in site.data.videos %}
     <div class="container">
+
       <div class="video-overlay">
+        <p>{{ video.categorie }}</p>
+        <p>---</p>
         <p>{{ video.desc }}</p>
       </div>
-      <iframe src="https://player.vimeo.com/video/179430733?byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      <iframe src="https://player.vimeo.com/video/179430733?byline=0&portrait=0&title=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
     </div>
   {% endfor %}
 </section>
 
 <script src="videos.js"></script>
-{{ page.videos }}

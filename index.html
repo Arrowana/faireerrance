@@ -1,18 +1,10 @@
 ---
 layout: default
 links:
-  - name: 21.01.16 Montreal
-  - name: 23.03.16 St-Donat
-  - name: 20.06.16 Rimouski
-  - name: 21.01.16 Montreal
-  - name: 21.01.16 Montreal
-  - name: 23.03.16 St-Donat
-  - name: 20.06.16 Rimouski
-  - name: 21.01.16 Montreal
-  - name: 21.01.16 Montreal
-  - name: 23.03.16 St-Donat
-  - name: 20.06.16 Rimouski
-  - name: 21.01.16 Montreal
+  - "errance1.html"
+  - "errance2.html"
+  - "errance3.html"
+  - "errance4.html"
 ---
 <section id="landing">
   <article id="summary">
@@ -36,7 +28,8 @@ Nous créons ici de nouveaux territoires subjectifs. Des territoires mémoriels 
 
   <aside>
     {% for link in page.links %}
-      <a href="">{{ link.name }}</a>
+      {% assign link_page = site.pages | where:"name",link | first %}
+      <a href="{{ link_page.url }}">{{ link_page.date }} {{ link_page.location | split: ',' | first }}</a>
     {% endfor %}
   </aside>
 </section>

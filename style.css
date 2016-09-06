@@ -53,16 +53,11 @@ a:hover {
 
 aside {
   display: inline-block;
-  width: 23%;
+  width: 15%;
   height: 100%;
   border-top: 3px solid black;
-  margin-left: 50px;
+  margin-left: 100px;
   padding-top: 1em;
-  text-align: center;
-}
-
-aside a {
-  margin-left: 20px;
 }
 
 #video-container {
@@ -101,7 +96,6 @@ aside a {
   display: inline-block;
   width: 49%;
   vertical-align: middle;
-  margin-top: -50%;
 }
 
 #errances span {
@@ -116,17 +110,28 @@ aside a {
   
 
 #errance article {
-  width: 30%;
+  width: 20%;
+  margin-right: 10%;
   display: inline-block;
   vertical-align: top;
+  border-top: 3px solid black;
+}
+
+#errance article img {
+  width: 100%;
 }
 
 #errance iframe {
   display: inline-block;
 }
 
+#errance-links {
+  padding-top: 10px;
+  border-top: 3px solid black;
+}
+
 #logos {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 

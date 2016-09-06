@@ -1,40 +1,20 @@
 ---
-layout: default
+layout: errances
 links:
   - categorie: FLEUVE
     color: blue
     elements:
-    - name: 21.01.16 Montréal, Canada, L. Bourgault et C. Dval
-      url: '' 
-    - name: 21.01.16 Montréal, Canada, L. Bourgault et C. Duval
-      url: ''
-    - name: 20.06.16 Rimouski, L. Bourgault
-      url: ''
+    - page: "errance1.html"
+    - page: "errance2.html"
+    - page: "errance4.html"
   - categorie: FROIDURE
     color: blue
     elements:
-    - name: 23.03.16 Val-Morin, Canada, L. Bourgault, C. Duval, M.-M. Beaudoin 
-      url: ''
+    - page: "errance3.html"
   - categorie: RESISTANCE
     color: red
     elements:
-    - name: 20.06.16 Rimouski
-      url: ''
   - categorie: APPARITION
     color: yellow
     elements:
-    - name: 20.06.16 Rimouski
-      url: ''
 ---
-<section id="errances">
-  <article>
-  {% for group in page.links %}
-    <p><span style="color: {{ group.color }};">&#9679; </span>{{ group.categorie }}</p>
-      {% for element in group.elements %}
-        <a href="element.url">{{ element.name }}</a><br />
-      {% endfor %}
-  {% endfor %}
-  </article>
-  
-  <img src="images/carte.png">
-</section>
