@@ -1,5 +1,5 @@
 header {
-  height: 80px;
+  height: 90px;
 }
 
 #logo-wrapper {
@@ -11,8 +11,8 @@ header {
 #logo {
   display: inline-block;
   max-width: 75px;
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: 20px;
+  margin-left: 60px;
   margin-right: 5px;
 }
 
@@ -21,6 +21,8 @@ nav {
   height: 80;
   vertical-align: top;
   width: 79%;
+  margin-left: 70px;
+  margin-top: 10px;
 }
 
 nav a {

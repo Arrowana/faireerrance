@@ -41,10 +41,11 @@ a:hover {
 
 #summary {
   display: inline-block;
-  width: 65%;
+  width: 57%;
   height: 100%;
   vertical-align: top;
-  border-top: 3px solid black;
+  border-top: 2px solid black;
+  margin-left: 70px;
 }
 
 #summary p {
@@ -55,9 +56,14 @@ aside {
   display: inline-block;
   width: 15%;
   height: 100%;
-  border-top: 3px solid black;
+  border-top: 2px solid blue;
   margin-left: 100px;
-  padding-top: 1em;
+  padding-top: 0.5em;
+}
+
+aside a { 
+  font-size: 0.8em;
+  color: blue;
 }
 
 #video-container {
@@ -111,14 +117,16 @@ aside {
 
 #errance article {
   width: 20%;
-  margin-right: 10%;
+  margin-right: 2%;
+  margin-left: 70px;
   display: inline-block;
   vertical-align: top;
-  border-top: 3px solid black;
+  border-top: 2px solid black;
 }
 
 #errance article img {
-  width: 100%;
+  width: 80%;
+  padding-top: 50px;
 }
 
 #errance iframe {
@@ -127,12 +135,13 @@ aside {
 
 #errance-links {
   padding-top: 10px;
-  border-top: 3px solid black;
+  border-top: 0px solid black;
 }
 
 #logos {
-  width: 70%;
+  width: 60%;
   margin: auto;
+  padding-top: 30px;
 }
 
 #logos img {
