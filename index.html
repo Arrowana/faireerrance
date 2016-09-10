@@ -32,7 +32,7 @@ Nous créons ici de nouveaux territoires subjectifs. Des territoires mémoriels 
   <aside>
     {% for link in page.links %}
       {% assign link_page = site.pages | where:"name",link | first %}
-      <a href="{{ link_page.url }}">{{ link_page.date }} {{ link_page.location | split: ',' | first }}</a>
+      <a href="{{ link_page.url }}">{{ link_page.date }} {{ link_page.location | split: ',' | first }} {{ link_page.categorie }} </a>
     {% endfor %}
   </aside>
 </section>
