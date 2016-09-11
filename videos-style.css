@@ -3,8 +3,16 @@
   width: 100%;
 }
 
+#videos img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
 #videos-wrapper {
   font-size: 0;
+}
+
+body {
 }
 
 #videos-wrapper > div {
@@ -14,8 +22,7 @@
 .container {
   position: relative;
   display: inline-block;
-  width: calc(100% / 3);
-  height: calc(33vw * 9 / 16);
+  width: 33.3%;
 }
 
 @media screen and (max-width: 800px) {
@@ -25,22 +32,18 @@
   }
 }
 
-.container iframe {
-  width: 100.5%;
-  height: 100%;
-}
-
 .video-overlay {
   position: absolute;
   top: 0;
   right: 0;
-  width: 101%;
+  width: 100%;
   height: 100%;
   opacity: 0;
   background-color: blue;
   cursor: pointer;
   text-align: center;
   color: white;
+  padding: 0;
 }
 
 .video-overlay:hover {
@@ -49,3 +52,39 @@
   z-index: 10;
 }
 
+#global-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.8;
+  background-color: black;
+}
+
+#video-player {
+  position: fixed;
+  display: none;
+  padding: 1em;
+  background-color: grey;
+  border-radius: 5px;
+  top: 20%;
+  left: 50%;
+  margin-left: -25%;
+  z-index: 100;
+}
+
+#reduce-button {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+
+  right: -10px;
+  top: -10px;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: white;
+}

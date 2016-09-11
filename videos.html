@@ -8,16 +8,24 @@ title: Videos
   {% for video in site.data.videos %}
     <div class="container">
 
-      <div class="video-overlay">
+      <div class="video-overlay" data-video="{{ video.link }}">
         <p>{{ video.categorie }}</p>
         <p>---</p>
         <p>{{ video.desc }}</p>
+        <p><b>PLAY</b></p>
       </div>
 
-      <iframe src="https://player.vimeo.com/video/179430733?byline=0&portrait=0&title=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+      <img src="images/videos/{{ video.image }}">
     </div>
   {% endfor %}
+  <div id="video-player">
+      <div id="reduce-button">
+        X
+      </div>
+      <iframe id="iframe-player" src="https://player.vimeo.com/video/179430733?byline=0&portrait=0&title=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+  <div id="global-overlay">
+  </div>
 </section>
 
 <script src="https://player.vimeo.com/api/player.js"></script>

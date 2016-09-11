@@ -1,12 +1,28 @@
 - categorie: APPARITION 
+  image: 10.08.16_minerve.jpg
   desc: 10.08.16 Minerve, Charles D.
   link: 181168289  #vimeo video id
 - categorie: APPARITION
+  image: 21.07.16_rimouski.jpg
   desc: 21.07.16 Rimouski, Laure B.
   link: 181667023 
 - categorie: FROIDURE
+  image: 13.02.16_val-david.jpg
   desc: 13.02.16 Val-David, Laure B., Marie-Michèle B., Charles D.
   link: 181665412
 - categorie: FLEUVE
+  image: 01.02.16_montreal.jpg
+  desc: 01.02.16 Montreal, Laure B., Charles D.
+  link: 179430733
+- categorie: FLEUVE
+  image: 01.02.16_montreal.jpg
+  desc: 01.02.16 Montreal, Laure B., Charles D.
+  link: 179430733
+- categorie: FLEUVE
+  image: 01.02.16_montreal.jpg
+  desc: 01.02.16 Montreal, Laure B., Charles D.
+  link: 179430733
+- categorie: FLEUVE
+  image: 01.02.16_montreal.jpg
   desc: 01.02.16 Montreal, Laure B., Charles D.
   link: 179430733
